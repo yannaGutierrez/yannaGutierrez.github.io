@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence | Professional Makeup Artistry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .logo { font-family: 'Playfair Display', serif; }
+
+        /* Custom Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                              url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Subtle Animation for Cards */
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4a373;
+        }
+    </style>
+</head>
+<body class="bg-[#fafaf9] text-slate-900">
+
+    <nav class="flex justify-between items-center px-8 md:px-20 py-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-stone-100">
+        <div class="logo text-2xl font-bold uppercase tracking-[0.4em] text-stone-800">Essence</div>
+        <ul class="hidden md:flex space-x-12 text-[10px] tracking-[0.2em] uppercase font-bold text-stone-500">
+            <li><a href="#home" class="hover:text-stone-900 transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-stone-900 transition-colors">Services</a></li>
+            <li><a href="#contact" class="hover:text-stone-900 transition-colors">Contact</a></li>
+        </ul>
+        <a href="#contact" class="hidden md:block border border-stone-800 px-5 py-2 text-[10px] uppercase tracking-widest hover:bg-stone-800 hover:text-white transition-all">Book Now</a>
+    </nav>
+
+    <section id="home" class="hero-bg h-[90vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <span class="uppercase tracking-[0.5em] text-sm mb-4 block opacity-80">Welcome to Essence</span>
+            <h1 class="text-5xl md:text-8xl mb-8 leading-tight">Define Your Essence</h1>
+            <p class="text-lg md:text-xl font-light mb-10 max-w-xl mx-auto opacity-90 leading-relaxed">
+                Tailored beauty experiences in Savannah, Oton. Discover your most confident self through professional artistry.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-white text-stone-900 px-10 py-4 uppercase text-xs tracking-widest font-bold hover:bg-stone-200 transition-all">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-8 md:px-20 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div class="text-left">
+                <h2 class="text-5xl mb-2 text-stone-800">Our Services</h2>
+                <p class="text-stone-500 tracking-widest uppercase text-xs">Professional Artistry & Care</p>
+            </div>
+            <div class="h-[1px] flex-grow bg-stone-200 mx-8 hidden md:block mb-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="service-card bg-white p-12 border border-stone-100 shadow-sm group">
+                <div class="text-stone-300 text-4xl mb-6 group-hover:text-stone-800 transition-colors">01</div>
+                <h3 class="text-3xl mb-4 text-stone-800">Bridal Artistry</h3>
+                <p class="text-stone-500 font-light leading-relaxed mb-6">Elegant, long-lasting looks designed to highlight your natural features for your special day.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-stone-800 pb-1 cursor-pointer">Inquire</span>
+            </div>
+
+            <div class="service-card bg-white p-12 border border-stone-100 shadow-sm group">
+                <div class="text-stone-300 text-4xl mb-6 group-hover:text-stone-800 transition-colors">02</div>
+                <h3 class="text-3xl mb-4 text-stone-800">Editorial Glam</h3>
+                <p class="text-stone-500 font-light leading-relaxed mb-6">High-impact makeup for photography, fashion shows, and creative media productions.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-stone-800 pb-1 cursor-pointer">Inquire</span>
+            </div>
+
+            <div class="service-card bg-white p-12 border border-stone-100 shadow-sm group">
+                <div class="text-stone-300 text-4xl mb-6 group-hover:text-stone-800 transition-colors">03</div>
+                <h3 class="text-3xl mb-4 text-stone-800">Private Lessons</h3>
+                <p class="text-stone-500 font-light leading-relaxed mb-6">Master your personal routine with one-on-one professional guidance and product education.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-stone-800 pb-1 cursor-pointer">Inquire</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-stone-900 text-stone-300 py-20 px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl text-white mb-10">Experience the Essence</h2>
+            <div class="grid md:grid-cols-2 gap-10 mb-16 text-sm tracking-widest uppercase">
+                <div>
+                    <p class="text-stone-500 mb-2">Email Us</p>
+                    <p class="text-white">appointments@essencebeauty.com</p>
+                </div>
+                <div>
+                    <p class="text-stone-500 mb-2">Find Us</p>
+                    <p class="text-white">Savannah, Oton</p>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-10">
+                <p class="text-[10px] tracking-[0.3em] uppercase opacity-50">&copy; 2026 Essence Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
